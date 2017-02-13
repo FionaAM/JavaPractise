@@ -5,6 +5,7 @@
  */
 package mmrevision;
 import java.io.*;
+import java.util.Arrays;
 /**
  *
  * @author Fiona
@@ -28,6 +29,8 @@ public class MMRevision {
         total = sumElements(numbers);
         System.out.println("The total of the array is : " + total);
         biggestNumber(numbers);
+     //  int [] reversedArray = reverse(numbers);
+     //   System.out.println(Arrays.toString(reversedArray));
     }
     public static void printArray(int [] array)
     {
@@ -54,6 +57,19 @@ public class MMRevision {
                 maxNumber = array[i];
         }
         System.out.println("The biggest number in the array is : " + maxNumber);
+    }
+    public static int[] reverse(int [] array)
+    {
+        int[] reversedArray = new int[array.length];
+        
+        for(int i = 0; i < array.length; i++)
+        {
+            for (int j = 0; j < reversedArray.length; j--)
+            {
+            reversedArray[j] = array[i];
+            }
+        }
+        return reversedArray;
     }
     
 }
